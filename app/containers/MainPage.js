@@ -25,6 +25,7 @@ export default class MainPage extends Component {
         //         <div className="filter-and-sorter">
         //             <Filter/>
         //         </div>
+        //         <hr/>
         //         <div className="matched-items">
         //             {this.populateItems()}
         //         </div>
@@ -38,7 +39,7 @@ export default class MainPage extends Component {
                 <div className="filter-and-sorter">
                     <Filter/>
                 </div>
-                </hr>
+                <hr/>
                 <div className="matched-items">
                     {this.populateItems()}
                 </div>

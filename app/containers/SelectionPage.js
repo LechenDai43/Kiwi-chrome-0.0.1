@@ -20,7 +20,7 @@ export default class SelectionPage extends Component {
             // <div className="selection-page-body-leo">
             //     <Kiwi_header/>
             //     <h3>Select your favorite stores</h3>
-            //     </hr>
+            //     <hr/>
             //     <div className="list-of-stores">
             //         {this.populateStore()}
             //     </div>
@@ -31,7 +31,7 @@ export default class SelectionPage extends Component {
             <div className="selection-page-body-leo">
                 <h1>Kiwi Header</h1>
                 <h3>Select your favorite stores</h3>
-                </hr>
+                <hr/>
                 <div className="list-of-stores">
                     {this.populateStore()}
                 </div>
