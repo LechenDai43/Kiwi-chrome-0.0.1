@@ -9,28 +9,40 @@ import ItemBox from "../components/ItemBox";
 
 @connect()
 export default class MainPage extends Component {
-
-    static propTypes = {
-    };
-
     populateItems() {
+        // return (
+        //   <ItemBox/>
+        // );
         return (
-          <ItemBox/>
+            <h2>An item</h2>
         );
     }
 
     render() {
+        // return (
+        //     <div className="main-page-body-leo">
+        //         <Kiwi_header/>
+        //         <div className="filter-and-sorter">
+        //             <Filter/>
+        //         </div>
+        //         <div className="matched-items">
+        //             {this.populateItems()}
+        //         </div>
+        //         <KiwiFooter/>
+        //     </div>
+        //  );
+
         return (
             <div className="main-page-body-leo">
-                <Kiwi_header/>
+                <h1>Kiwi Header</h1>
                 <div className="filter-and-sorter">
                     <Filter/>
                 </div>
                 <div className="matched-items">
                     {this.populateItems()}
                 </div>
-                <KiwiFooter/>
+                <h1>Kiwi Footer</h1>
             </div>
-    );
+         );
     }
 }
