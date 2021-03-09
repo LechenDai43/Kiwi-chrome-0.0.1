@@ -16,7 +16,7 @@ export default class SelectionPage extends Component {
     }
 
     render() {
-        return (
+            //return (
             // <div className="selection-page-body-leo">
             //     <Kiwi_header/>
             //     <h3 className="selection-instruction">Select your favorite stores</h3>
@@ -26,7 +26,7 @@ export default class SelectionPage extends Component {
             //     </div>
             //     // Here should be the finish button
             // </div>
-         );
+            // );
         return (
             <div className="selection-page-body-leo">
                 <h1>Kiwi Header</h1>
