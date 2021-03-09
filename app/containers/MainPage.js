@@ -27,7 +27,7 @@ export default class MainPage extends Component {
                     <Filter/>
                 </div>
                 <div className="matched-items">
-                    {populateItems()}
+                    {this.populateItems()}
                 </div>
                 <KiwiFooter/>
             </div>
