@@ -10,12 +10,12 @@ import ItemBox from "../components/ItemBox";
 @connect()
 export default class MainPage extends Component {
     populateItems() {
-        // return (
-        //   <ItemBox/>
-        // );
         return (
-            <h2>An item</h2>
+          <ItemBox/>
         );
+        // return (
+        //     <h2>An item</h2>
+        // );
     }
 
     render() {
