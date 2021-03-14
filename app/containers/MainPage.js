@@ -36,6 +36,7 @@ export default class MainPage extends Component {
         return (
             <div className="main-page-body-leo">
                 <h1>Kiwi Header</h1>
+                <Kiwi_header></Kiwi_header>
                 <div className="filter-and-sorter">
                     <Filter/>
                 </div>

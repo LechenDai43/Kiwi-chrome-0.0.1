@@ -5,7 +5,7 @@ export default class Filter extends Component {
 
     render() {
         return (
-            <div classNames="main-filter-leo">
+            <div className ="main-filter-leo">
                 <h3>Size Filter</h3>
                 <input type="text" placeholder="Enter size..."/>
             </div>
