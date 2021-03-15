@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import KiwiHeader from "../KiwiHeader/KiwiHeader";
-import ReviewBox from "../ReviewBox/ReviewBox";
-import KiwiFooter from "../KiwiFooter/KiwiFooter";
+import Header from "../../components/Header/Header";
+import SingleReview from "../../components/SingleReview/SingleReview";
+import Footer from "../../components/Footer/Footer";
 
 class ReviewContainer extends Component {
   constructor (props) {
@@ -16,7 +16,7 @@ class ReviewContainer extends Component {
     return (
       <div>
         <KiwiHeader />
-        <ReviewBox />
+          {SingleReview()}
         <KiwiFooter />
       </div>
     )

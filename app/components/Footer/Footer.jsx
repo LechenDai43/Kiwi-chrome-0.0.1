@@ -3,7 +3,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import RateReviewIcon from "@material-ui/icons/RateReview";
 import PersonIcon from "@material-ui/icons/Person";
 
-class KiwiFooter extends Component {
+class Footer extends Component {
   constructor (props) {
     super(props);
 
@@ -23,4 +23,4 @@ class KiwiFooter extends Component {
   }
  }
 
-export default KiwiFooter;
+export default Footer;
