@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import style from './App.css';
-import Filter from "../components/Filter";
 
 @connect(
   state => ({
@@ -21,7 +20,6 @@ export default class App extends Component {
 
     return (
       <div className={style.normal}>
-        <Filter/>
       </div>
     );
   }

@@ -1,12 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import style from './App.css';
 import Filter from "../../components/Filter/Filter";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import ItemBox from "../../components/Item/ItemBox";
-import SortButton from "../../components/SortButton/SortButton";
+// import SortButton from "../../components/SortButton/SortButton";
 
 @connect()
 export default class MainPage extends Component {
@@ -25,13 +24,12 @@ export default class MainPage extends Component {
                 <Header/>
                 <div className="filter-and-sorter">
                     <Filter/>
-                    {SortButton()}
+
                 </div>
                 <hr/>
                 <div className="matched-items">
                     {this.populateItems()}
                 </div>
-                <Footer/>
             </div>
          );
 
