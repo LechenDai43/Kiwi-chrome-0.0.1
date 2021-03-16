@@ -4,6 +4,7 @@ import { deepOrange } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import "./SingleReview.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,40 +26,11 @@ export default function SingleReview() {
 
   return (
     <div>
-      <div style={{ display: "flex", height: "45px" }}>
-        <Avatar
-          className={classes.orange}
-          style={{ height: "45px", width: "45px" }}
-        >
-          N
-        </Avatar>
-        <span
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            marginLeft: "10px"
-          }}
-        >
-          Jinhong
-        </span>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            marginLeft: "78px"
-          }}
-        >
-          <Button
-            variant="outlined"
-            style={{
-              width: "90px",
-              height: "24px",
-              textTransform: "none",
-              borderRadius: "20px"
-            }}
-          >
+      <div className="in-line">
+        <Avatar className={classes.orange}>N</Avatar>
+        <span className="username-position">Jinhong</span>
+        <div className="button-position">
+          <Button variant="outlined" className="button-size">
             Follow
           </Button>
         </div>
@@ -68,34 +40,19 @@ export default function SingleReview() {
         alt="Fashion shoe"
         width="300px"
         height="250px"
-        style={{ paddingTop: "8px" }}
+        className="image-position"
       />
-      <div style={{ display: "flex" }}>
-        <FavoriteBorderIcon />
+      <div className="in-line">
+        <FavoriteBorderIcon className="green-color" />
         {tags.map((tag) => (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              marginLeft: "15px"
-            }}
-          >
-            <Button
-              variant="outlined"
-              style={{
-                width: "97px",
-                height: "13px",
-                textTransform: "none",
-                borderRadius: "10px"
-              }}
-            >
+          <div className="tag-position">
+            <Button variant="outlined" className="tag-size">
               {tag}
             </Button>
           </div>
         ))}
       </div>
-      <p style={{ width: "313px", marginTop: "6px" }}>
+      <p className="text-position">
         I bought this shoe with size 37 from SSense. The size goes a little bit
         smaller than normal. I really like this shoe! It is very comfortable and
         you can wear it all the time.

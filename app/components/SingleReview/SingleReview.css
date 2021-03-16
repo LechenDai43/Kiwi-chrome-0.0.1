@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atma&display=swap");
+
+.in-line {
+  display: flex;
+}
+
+.username-position {
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  display: flex;
+  font-family: "Atma";
+  font-size: 15px;
+}
+
+.button-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 78px;
+}
+
+.button-size {
+  width: 90px;
+  height: 24px;
+  text-transform: none;
+  border-radius: 20px;
+  color: #2fb31a;
+  border-color: #2fb31a;
+  font-family: "Atma";
+  font-size: 15px;
+}
+
+.image-position {
+  padding-top: 8px;
+}
+
+.tag-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.tag-size {
+  width: 97px;
+  height: 13px;
+  text-transform: none;
+  border-radius: 10px;
+  border-color: #2fb31a;
+  font-family: "Alice";
+  font-size: 10px;
+}
+
+.text-position {
+  width: 313px;
+  margin-top: 6px;
+  font-family: "Acme";
+}
+
+.green-color {
+  color: #2fb31a;
+}
