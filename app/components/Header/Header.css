@@ -1,0 +1,15 @@
+.header{
+    position: absolute;
+    width: 156px;
+    height: 39px;
+
+    font-family: Yinmar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+
+    color: #2FB31A;
+
+    mix-blend-mode: normal;
+}
