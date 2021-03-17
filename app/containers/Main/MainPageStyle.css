@@ -11,12 +11,31 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    height: auto;
 }
 
 .mainitemslist {
     width: 96%;
     padding: 2%;
     overflow: auto;
-    height: 300px;
+    height: 375px;
+
+}
+
+body {
+    width: 353px;
+    height: 528px;
+}
+
+.mainupperpart {
+    height: 84px;
+}
+
+.mainlowerpoart {
+    height: 69px;
+}
+
+.mainaroundheader {
+    height: 54px;
 }
 

@@ -22,17 +22,24 @@ export default class MainPage extends Component {
     render() {
         return (
             <div className= {MainPageStyle.mainpagebodyleo}>
-                <Header/>
-                <div className={MainPageStyle.filterandsorter}>
-                    <Filter/>
-                    <SortButton/>
+                <div className={MainPageStyle.mainupperpart}>
+                    <div className={MainPageStyle.mainaroundheader}>
+                        <Header/>
+                        <p></p>
+                    </div>
+                    <div className={MainPageStyle.filterandsorter}>
+                        <Filter/>
+                        <SortButton/>
+                    </div>
                 </div>
                 <hr/>
                 <div className= {MainPageStyle.mainitemslist}>
                     {this.populateItems()}
                 </div>
-                <hr/>
-                <Footer/>
+                <div className={MainPageStyle.mainlowerpart}>
+                    <hr/>
+                    <Footer/>
+                </div>
             </div>
          );
 
