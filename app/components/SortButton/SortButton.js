@@ -3,6 +3,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
+import "./SortButton.css";
 
 const StyledMenu = withStyles({
   paper: {
@@ -44,12 +45,7 @@ export default function SortButton() {
       <Button
         aria-haspopup="true"
         onClick={handleClick}
-        style={{
-          textTransform: "none",
-          width: "147px",
-          height: "18px",
-          borderRadius: "5px"
-        }}
+        className="sort-button"
         variant="outlined"
       >
         Sort
