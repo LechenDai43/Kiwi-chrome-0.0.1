@@ -6,13 +6,13 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ItemBox from "../../components/Item/ItemBox";
 import SortButton from "../../components/SortButton/SortButton";
-import "./MainPageStyle.css";
+import MainPageStyle from "./MainPageStyle.css";
 
 @connect()
 export default class MainPage extends Component {
     populateItems() {
         return (
-          <ItemBox/>
+            <ItemBox/>
         );
         // return (
         //     <h2>An item</h2>
@@ -21,16 +21,17 @@ export default class MainPage extends Component {
 
     render() {
         return (
-            <div className="main-page-body-leo">
+            <div className= {MainPageStyle.mainpagebodyleo}>
                 <Header/>
-                <div className="filter-and-sorter">
+                <div className={MainPageStyle.filterandsorter}>
                     <Filter/>
                     <SortButton/>
                 </div>
                 <hr/>
-                <div className="matched-items">
+                <div className= {MainPageStyle.mainitemslist}>
                     {this.populateItems()}
                 </div>
+                <hr/>
                 <Footer/>
             </div>
          );
