@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Header from "../../components/Header/Header";
 import Selector from "../../components/Selector/Selector";
