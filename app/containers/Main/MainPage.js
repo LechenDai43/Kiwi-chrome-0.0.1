@@ -25,6 +25,7 @@ export default class MainPage extends Component {
                 <Header/>
                 <div className="filter-and-sorter">
                     <Filter/>
+                    <SortButton/>
                 </div>
                 <hr/>
                 <div className="matched-items">

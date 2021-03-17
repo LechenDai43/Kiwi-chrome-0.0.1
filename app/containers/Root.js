@@ -7,10 +7,6 @@ import ReviewContainer from "./Review/ReviewContainer";
 
 export default class Root extends Component {
 
-  static propTypes = {
-    store: PropTypes.object.isRequired
-  };
-
   render() {
     const { store } = this.props;
     return (
