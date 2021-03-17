@@ -1,9 +1,9 @@
 import React from "react";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
-import "./SortButton.css";
+import SortButtonStyle from "./SortButtonStyle.css";
 
 const StyledMenu = withStyles({
   paper: {
@@ -42,14 +42,14 @@ export default function SortButton() {
 
   return (
     <div>
-      <Button
+      <button
         aria-haspopup="true"
         onClick={handleClick}
-        className="sort-button"
+        className={SortButtonStyle.sortbutton}
         variant="outlined"
       >
         Sort
-      </Button>
+      </button>
       <StyledMenu
         anchorEl={anchorEl}
         keepMounted

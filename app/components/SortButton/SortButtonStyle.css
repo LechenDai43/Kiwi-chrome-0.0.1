@@ -1,0 +1,17 @@
+.sortbutton {
+  text-transform: none;
+  width: 147px;
+
+  background: white;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  margin-left: 22px;
+
+  border-radius: 15px;
+  font-size: 14px;
+  padding: 3px;
+}
+
+.sortbutton:hover {
+  background-color: #dddddd;
+}
