@@ -3,15 +3,16 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Filter from "../../components/Filter/Filter";
 import Header from "../../components/Header/Header";
-// import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import ItemBox from "../../components/Item/ItemBox";
-// import SortButton from "../../components/SortButton/SortButton";
+import SortButton from "../../components/SortButton/SortButton";
+import MainPageStyle from "./MainPageStyle.css";
 
 @connect()
 export default class MainPage extends Component {
     populateItems() {
         return (
-          <ItemBox/>
+            <ItemBox/>
         );
         // return (
         //     <h2>An item</h2>
@@ -20,15 +21,24 @@ export default class MainPage extends Component {
 
     render() {
         return (
-            <div className="main-page-body-leo">
-                <Header/>
-                <div className="filter-and-sorter">
-                    <Filter/>
-
+            <div className= {MainPageStyle.mainpagebodyleo}>
+                <div className={MainPageStyle.mainupperpart}>
+                    <div className={MainPageStyle.mainaroundheader}>
+                        <Header/>
+                        <p></p>
+                    </div>
+                    <div className={MainPageStyle.filterandsorter}>
+                        <Filter/>
+                        <SortButton/>
+                    </div>
                 </div>
                 <hr/>
-                <div className="matched-items">
+                <div className= {MainPageStyle.mainitemslist}>
                     {this.populateItems()}
+                </div>
+                <div className={MainPageStyle.mainlowerpart}>
+                    <hr/>
+                    <Footer/>
                 </div>
             </div>
          );

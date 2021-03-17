@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 
-export default class header extends Component{
+export default class Header extends Component{
     state = {};
 
     render() {

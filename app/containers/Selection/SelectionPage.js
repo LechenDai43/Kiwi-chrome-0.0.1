@@ -1,38 +1,35 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import Header from "../../components/Header/Header";
 import Selector from "../../components/Selector/Selector";
+import SelectionPageStyle from "./SelectionPageStyle.css";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 @connect()
 export default class SelectionPage extends Component {
     populateStore() {
         return (
-            <Selector>
+            <Selector/>
         );
     }
 
     render() {
-        return (
-            <div className="selection-page-body-leo">
-                <Header/>
-                <h3 className="selection-instruction">Select your favorite stores</h3>
+       return (
+            <div className= {SelectionPageStyle.selectionpagebodyleo}>
+                <div className= {SelectionPageStyle.selectionheaderpart}>
+                    <Header/>
+                    <AccountCircleIcon/>
+                </div>
+                <h6 className={SelectionPageStyle.selectioninstruction}>Select your favorite stores</h6>
                 <hr/>
-                <div className="list-of-stores">
+                <div className={SelectionPageStyle.selectionselectorlist}>
                     {this.populateStore()}
                 </div>
-                // Here should be the finish button
+                <div className={SelectionPageStyle.selectionfooter}>
+                    <hr/>
+                    <button className={SelectionPageStyle.selectionfinishbutton}>Finish</button>
+                </div>
             </div>
         );
-        // return (
-        //     <div className="selection-page-body-leo">
-        //         <h1>Kiwi Header</h1>
-        //         <h3 className="selection-instruction">Select your favorite stores</h3>
-        //         <hr/>
-        //         <div className="list-of-stores">
-        //             {this.populateStore()}
-        //         </div>
-        //         // Here should be the finish button
-        //     </div>
-        // );
     }
 }
