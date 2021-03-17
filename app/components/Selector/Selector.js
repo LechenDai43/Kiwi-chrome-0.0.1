@@ -10,7 +10,7 @@ export default class Selector extends Component{
         return (
             <div>
                 <div className={style.rectangle}></div>
-                <p>{this.props.brand}</p>
+                <div className={style.text}>{this.props.brand}</div>
             </div>
         )
     }
