@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import './ItemBox.css';
 
 export default class ItemBox extends Component{
     constructor(prop) {
@@ -14,11 +15,12 @@ export default class ItemBox extends Component{
 
     render() {
         return (
-            <div className = "main-itembox-leo">
-                <img className="main-itembox-image-leo" url={this.state.image_url}/>
-                <div className="main-itembox-info-leo">
-                    <h2>{this.state.website}</h2>
-                    <p>${this.state.price} + {this.state.free_ship? "free shipping": this.state.ship_cost}</p>
+            <div classNames = "main-itembox-leo">
+                <img classNames="main-itembox-image-leo" url={this.state.image_url}/>
+                <div classNames="main-itembox-info-leo">
+                    <h2 classNames="main-itembox-website">{this.state.website}</h2>
+                    <p className="main-itembox-price">${this.state.price} + {this.state.free_ship? "free shipping": this.state.ship_cost}</p>
+
                 </div>
             </div>
         );

@@ -1,0 +1,33 @@
+.main-itembox-leo {
+    display: flex;
+}
+
+.main-itembox-image-leo {
+    flex-direction: row;
+    width: 97px;
+    height: 56px;
+    left: 1075px;
+    top: 293px;
+}
+
+.main-itembox-info-leo {
+    flex-direction: row;
+}
+
+.main-itembox-website {
+    font-family: Yinmar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    color: #2FB31A;
+}
+
+.main-itembox-price {
+    font-family: Yinmar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
