@@ -1,0 +1,19 @@
+.mainfilterleo {
+    display: flex;
+    align-items: center;
+    width: 147px;
+    margin-left: 16px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 18px;
+    padding: 2px;
+}
+
+.filterheader {
+    width: 28%;
+}
+
+.filterinput {
+    width: 68%;
+    border: none;
+}

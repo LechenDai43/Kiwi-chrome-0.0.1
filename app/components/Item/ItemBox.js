@@ -20,6 +20,7 @@ export default class ItemBox extends Component{
                 <div classNames="main-itembox-info-leo">
                     <h2 classNames="main-itembox-website">{this.state.website}</h2>
                     <p className="main-itembox-price">${this.state.price} + {this.state.free_ship? "free shipping": this.state.ship_cost}</p>
+
                 </div>
             </div>
         );
