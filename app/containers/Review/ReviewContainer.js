@@ -15,9 +15,9 @@ class ReviewContainer extends Component {
   render () {
     return (
       <div>
-        <KiwiHeader />
-          {SingleReview()}
-        <KiwiFooter />
+        <Header />
+          <SingleReview/>
+        <Footer />
       </div>
     )
   }
