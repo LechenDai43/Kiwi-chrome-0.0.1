@@ -1,10 +1,10 @@
-import React, {Component} from "react";
-import Header from "../../components/Header/Header";
-import SingleReview from "../../components/SingleReview/SingleReview";
-import Footer from "../../components/Footer/Footer";
+import React, { Component } from 'react';
+import Header from '../../components/Header/Header';
+import Reviews from '../../components/Reviews/Reviews';
+import Footer from '../../components/Footer/Footer';
 
 class ReviewContainer extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -12,14 +12,14 @@ class ReviewContainer extends Component {
     };
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Header />
-          <SingleReview/>
+        <Reviews />
         <Footer />
       </div>
-    )
+    );
   }
 }
 

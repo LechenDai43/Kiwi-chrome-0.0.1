@@ -2,11 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Atma&display=swap");
 
-.in-line {
+.in_line {
   display: flex;
 }
 
-.username-position {
+.username_position {
   flex-direction: column;
   justify-content: center;
   margin-left: 10px;
@@ -15,14 +15,14 @@
   font-size: 15px;
 }
 
-.button-position {
+.button_position {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 78px;
 }
 
-.button-size {
+.button_size {
   width: 90px;
   height: 24px;
   text-transform: none;
@@ -33,18 +33,18 @@
   font-size: 15px;
 }
 
-.image-position {
+.image_position {
   padding-top: 8px;
 }
 
-.tag-position {
+.tag_position {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 15px;
 }
 
-.tag-size {
+.tag_size {
   width: 97px;
   height: 13px;
   text-transform: none;
@@ -54,12 +54,12 @@
   font-size: 10px;
 }
 
-.text-position {
+.text_position {
   width: 313px;
   margin-top: 6px;
   font-family: "Acme";
 }
 
-.green-color {
+.green_color {
   color: #2fb31a;
 }
