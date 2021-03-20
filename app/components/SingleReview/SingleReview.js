@@ -2,7 +2,6 @@ import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import { deepOrange } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PropTypes from 'prop-types';
 import ReviewStyle from './SingleReview.css';
@@ -30,9 +29,9 @@ export default function SingleReview(props) {
         <Avatar className={classes.orange}>{avatar}</Avatar>
         <span className={ReviewStyle.username_position}>{username}</span>
         <div className={ReviewStyle.button_position}>
-          <Button variant="outlined" className={ReviewStyle.button_size}>
+          <button className={ReviewStyle.button_size}>
             Follow
-          </Button>
+          </button>
         </div>
       </div>
       <img
@@ -46,9 +45,9 @@ export default function SingleReview(props) {
         <FavoriteBorderIcon className={ReviewStyle.green_color} />
         {tags.map(tag => (
           <div className={ReviewStyle.tag_position}>
-            <Button variant="outlined" className={ReviewStyle.tag_size}>
+            <button className={ReviewStyle.tag_size}>
               {tag}
-            </Button>
+            </button>
           </div>
         ))}
       </div>
