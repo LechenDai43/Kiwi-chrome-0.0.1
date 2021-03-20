@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import PersonIcon from '@material-ui/icons/Person';
+import style from './Footer.css';
 
 class Footer extends Component {
   constructor(props) {
@@ -14,10 +15,10 @@ class Footer extends Component {
 
   render() {
     return (
-      <div>
-        <HomeIcon />
-        <RateReviewIcon />
-        <PersonIcon />
+      <div className={style.navbar}>
+        <HomeIcon className={style.first}/>
+        <RateReviewIcon className={style.second}/>
+        <PersonIcon className={style.third}/>
       </div>
     );
   }
