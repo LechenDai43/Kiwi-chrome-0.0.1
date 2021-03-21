@@ -11,12 +11,16 @@ export default class Root extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Select'
+      page: 'Select',
+      checked_list: ['Farfetch', 'SSense', 'END.', 'Saks Fifth Avenue', 'Neiman Marcus']
     };
   }
 
-  fromSelection2Main () {
+  fromSelection2Main (list) {
     this.setState({page: 'Main'});
+    if (list.length >= 1) {
+      this.setState({checked_list: list});
+    }
     this.forceUpdate();
   }
 
@@ -36,10 +40,10 @@ export default class Root extends Component {
 
   pickPage() {
     if (this.state.page === 'Select') {
-      return (<SelectionPage redirection={() => this.fromSelection2Main()}/>);
+      return (<SelectionPage redirection={(list) => this.fromSelection2Main(list)}/>);
     }
     else if (this.state.page === 'Main') {
-      return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
+      return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)} brands={this.state.checked_list}/>)
     }
     else if (this.state.page === 'Review') {
       return (<ReviewContainer redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)

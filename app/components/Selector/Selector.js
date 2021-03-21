@@ -11,6 +11,12 @@ export default class Selector extends Component {
         };
     }
 
+    handleChecking () {
+        this.setState({checked: this.state.checked?false:true});
+        var operation = this.state.checked? -1: 1;
+        this.props.handler(this.props.brand, operation);
+    }
+
     render() {
         return (
             <div style={{marginLeft: "52px"}}>
@@ -19,7 +25,7 @@ export default class Selector extends Component {
                         <Checkbox
                             color='default'
                             style={{color: "#2FB31A"}}
-                            onChange={()=>this.setState({checked: this.state.checked?false:true})}
+                            onChange={()=> this.handleChecking()}
                         />
                     }
                     label={<span className={style.text}>{this.props.brand}</span>}

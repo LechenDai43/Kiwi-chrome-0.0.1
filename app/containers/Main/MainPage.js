@@ -77,13 +77,23 @@ export default class MainPage extends Component {
             target_size: -1,
             sort_key: "Default"
         }
-        console.log(this.state.items);
-        console.log(fakeData);
     }
 
     populateItems() {
         var result = [];
         for (var i = 0; i < this.state.items.length; i++) {
+            var found = 0;
+            for (var j = 0; j < this.props.brands.length; j++) {
+                if (this.props.brands[j] === this.state.items[i].website) {
+                    found = 1;
+                    break;
+                }
+            }
+
+            if (found === 0) {
+                continue;
+            }
+
             var detail = this.state.items[i];
             if (this.state.target_size === -1) {
                 result.push(<ItemBox detail={detail}/>);
@@ -104,8 +114,6 @@ export default class MainPage extends Component {
     handleFilter (event) {
         var inputvalue = event.target.value;
         var keySize = inputvalue;
-        console.log("called in main page function");
-        console.log(keySize);
         if (keySize < 34 || keySize > 46) {
             if (keySize == "") {
                 this.setState({target_size: -1});
@@ -119,7 +127,6 @@ export default class MainPage extends Component {
 
     handleSorter (event) {
         var checkedKey = event.target.innerText;
-        console.log(checkedKey);
         if (checkedKey == "Price") {
             var newList = [];
             var oldList = this.state.items;
