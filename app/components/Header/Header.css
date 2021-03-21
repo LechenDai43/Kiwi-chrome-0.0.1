@@ -1,5 +1,5 @@
 .header{
-    width: 156px;
+    width: 100%;
     height: 39px;
 
     font-family: Yinmar;
@@ -11,4 +11,5 @@
     color: #2FB31A;
 
     mix-blend-mode: normal;
+    text-align: center;
 }
