@@ -68,11 +68,17 @@ export default class MainPage extends Component {
 
     constructor(props) {
         super(props);
+        var dupFakeData = [];
+        for (var i = 0; i < fakeData.length; i++) {
+            dupFakeData.push(fakeData[i]);
+        }
         this.state = {
-            items: fakeData,
+            items: dupFakeData,
             target_size: -1,
             sort_key: "Default"
         }
+        console.log(this.state.items);
+        console.log(fakeData);
     }
 
     populateItems() {
@@ -183,7 +189,7 @@ export default class MainPage extends Component {
                 </div>
                 <div className={MainPageStyle.mainlowerpart}>
                     <hr/>
-                    <Footer/>
+                    <Footer redirection={(targetPage) => this.props.redirection(targetPage)} page='Main'/>
                 </div>
             </div>
          );

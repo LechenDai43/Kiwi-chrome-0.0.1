@@ -7,6 +7,10 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 @connect()
 export default class SelectionPage extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     populateStore() {
         return (
             <Selector/>
@@ -27,7 +31,7 @@ export default class SelectionPage extends Component {
                 </div>
                 <div className={SelectionPageStyle.selectionfooter}>
                     <hr/>
-                    <button className={SelectionPageStyle.selectionfinishbutton}>Finish</button>
+                    <button className={SelectionPageStyle.selectionfinishbutton} onClick={() => {this.props.redirection()}}>Finish</button>
                 </div>
             </div>
         );
