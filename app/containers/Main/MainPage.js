@@ -101,6 +101,10 @@ export default class MainPage extends Component {
         console.log("called in main page function");
         console.log(keySize);
         if (keySize < 34 || keySize > 46) {
+            if (keySize == "") {
+                this.setState({target_size: -1});
+                this.forceUpdate();
+            }
             return null;
         }
         this.setState({target_size: keySize});
