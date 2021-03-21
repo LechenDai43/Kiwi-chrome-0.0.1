@@ -25,19 +25,22 @@ const StyledMenu = withStyles({
   />
 ));
 
-const options = ['All', 'Most Popular'];
+const options = ['Price','Popularity'];
 
-export default function SortButton() {
+export default function SortButton(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [shoeSize, setShoeSize] = React.useState('All');
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+
   };
 
-  const handleClose = () => {
+  const handleClose = (event) => {
     setAnchorEl(null);
+    console.log(event.target.innerText);
+    props.handler(event);
   };
 
   return (
