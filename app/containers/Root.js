@@ -4,6 +4,8 @@ import App from './App';
 import MainPage from './Main/MainPage';
 import SelectionPage from './Selection/SelectionPage';
 import ReviewContainer from './Review/ReviewContainer';
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 const possible_page = ['Select', 'Main', 'Review', 'Profile'];
 
@@ -48,8 +50,12 @@ export default class Root extends Component {
     else if (this.state.page === 'Review') {
       return (<ReviewContainer redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
     }
+    else if (this.state.page === 'Profile') {
+      // https://i.ibb.co/dLRwSHZ/profile.png
+      return (<div><Header/><img src="https://i.ibb.co/dLRwSHZ/profile.png"/><Footer redirection={(targetPage) => this.redirectByFooter(targetPage)} page='Profile'/></div>);
+    }
     else {
-      return (<h1>Wait</h1>);
+
     }
 
   }
