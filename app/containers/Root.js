@@ -4,6 +4,8 @@ import App from './App';
 import MainPage from './Main/MainPage';
 import SelectionPage from './Selection/SelectionPage';
 import ReviewContainer from './Review/ReviewContainer';
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 const possible_page = ['Select', 'Main', 'Review', 'Profile'];
 
@@ -11,12 +13,16 @@ export default class Root extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Select'
+      page: 'Select',
+      checked_list: ['Farfetch', 'SSense', 'END.', 'Saks Fifth Avenue', 'Neiman Marcus']
     };
   }
 
-  fromSelection2Main () {
+  fromSelection2Main (list) {
     this.setState({page: 'Main'});
+    if (list.length >= 1) {
+      this.setState({checked_list: list});
+    }
     this.forceUpdate();
   }
 
@@ -36,16 +42,20 @@ export default class Root extends Component {
 
   pickPage() {
     if (this.state.page === 'Select') {
-      return (<SelectionPage redirection={() => this.fromSelection2Main()}/>);
+      return (<SelectionPage redirection={(list) => this.fromSelection2Main(list)}/>);
     }
     else if (this.state.page === 'Main') {
-      return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
+      return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)} brands={this.state.checked_list}/>)
     }
     else if (this.state.page === 'Review') {
       return (<ReviewContainer redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
     }
+    else if (this.state.page === 'Profile') {
+      // https://i.ibb.co/dLRwSHZ/profile.png
+      return (<div><Header/><img src="https://i.ibb.co/dLRwSHZ/profile.png"/><Footer redirection={(targetPage) => this.redirectByFooter(targetPage)} page='Profile'/></div>);
+    }
     else {
-      return (<h1>Wait</h1>);
+
     }
 
   }
