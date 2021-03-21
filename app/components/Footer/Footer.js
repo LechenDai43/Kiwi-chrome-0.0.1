@@ -10,20 +10,21 @@ class Footer extends Component {
 
     this.state = {
       // enter state here
-      current: "MainPage"
+      current: 'Main'
     };
   }
 
   setCurrent = (IconText) => {
-    this.setState({current: IconText});
+    this.props.redirection(IconText);
   }
 
   render() {
     return (
       <div className={style.navbar}>
-        <button className={style.first} onClick={() => this.setCurrent("MainPage")}><HomeIcon/></button>
-        <button className={style.second} onClick={() => this.setCurrent("ReviewContainer")}><RateReviewIcon/></button>
-        <button className={style.third}><PersonIcon/></button>
+        <HomeIcon className={style.first + (this.props.page === 'Main'? " " + style.grey : "")}
+                  onClick={() => this.setCurrent('Main')}/>
+        <RateReviewIcon className={style.second} onClick={() => this.setCurrent('Review')}/>
+        <PersonIcon className={style.third} onClick ={() => this.setCurrent('Profile')}/>
       </div>
     );
   }

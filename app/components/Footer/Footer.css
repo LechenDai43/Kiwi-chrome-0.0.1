@@ -29,3 +29,7 @@ display: block;
 color: #2FB31A;
 padding-left: 90px;
 }
+
+.grey {
+    color: darkgrey;
+}

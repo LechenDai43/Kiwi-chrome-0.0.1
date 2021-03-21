@@ -39,7 +39,7 @@ export default class Root extends Component {
       return (<SelectionPage redirection={() => this.fromSelection2Main()}/>);
     }
     else if (this.state.page === 'Main') {
-      return (<MainPage redirection={() => this.redirectByFooter()}/>)
+      return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
     }
     else {
       return (<h1>Wait</h1>);

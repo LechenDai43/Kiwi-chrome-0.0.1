@@ -183,7 +183,7 @@ export default class MainPage extends Component {
                 </div>
                 <div className={MainPageStyle.mainlowerpart}>
                     <hr/>
-                    <Footer/>
+                    <Footer redirection={(targetPage) => this.props.redirection(targetPage)} page='Main'/>
                 </div>
             </div>
          );
