@@ -1,43 +1,46 @@
-import React from "react";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import React from 'react';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 // import Button from "@material-ui/core/Button";
-import { withStyles } from "@material-ui/core/styles";
-import SortButtonStyle from "./SortButtonStyle.css";
+import { withStyles } from '@material-ui/core/styles';
+import SortButtonStyle from './SortButtonStyle.css';
 
 const StyledMenu = withStyles({
   paper: {
-    border: "1px solid #d3d4d5"
+    border: '1px solid #d3d4d5'
   }
-})((props) => (
+})(props => (
   <Menu
     elevation={0}
     getContentAnchorEl={null}
     anchorOrigin={{
-      vertical: "bottom",
-      horizontal: "center"
+      vertical: 'bottom',
+      horizontal: 'center'
     }}
     transformOrigin={{
-      vertical: "top",
-      horizontal: "center"
+      vertical: 'top',
+      horizontal: 'center'
     }}
     {...props}
   />
 ));
 
-const options = ["All", "Most Popular"];
+const options = ['Price','Popularity'];
 
-export default function SortButton() {
+export default function SortButton(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [shoeSize, setShoeSize] = React.useState("All");
+  const [shoeSize, setShoeSize] = React.useState('All');
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+
   };
 
-  const handleClose = () => {
+  const handleClose = (event) => {
     setAnchorEl(null);
+    console.log(event.target.innerText);
+    props.handler(event);
   };
 
   return (
@@ -58,11 +61,11 @@ export default function SortButton() {
         PaperProps={{
           style: {
             maxHeight: 20 * 4.5,
-            width: "18ch"
+            width: '18ch'
           }
         }}
       >
-        {options.map((option) => (
+        {options.map(option => (
           <MenuItem key={option} value={shoeSize} onClick={handleClose}>
             {option}
           </MenuItem>

@@ -3,8 +3,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import style from './Selector.css';
 
-export default class Selector extends Component{
-
+export default class Selector extends Component {
     constructor(props) {
         super(props);
         this.state = {

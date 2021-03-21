@@ -1,33 +1,67 @@
-.main-itembox-leo {
+.main_itembox_leo {
     display: flex;
+    height: 90px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
 }
 
-.main-itembox-image-leo {
-    flex-direction: row;
+.main_itembox_img_btn {
+    display: block;
+}
+
+.main_itembox_image_leo {
     width: 97px;
     height: 56px;
-    left: 1075px;
-    top: 293px;
+    margin-left: 20px;
 }
 
-.main-itembox-info-leo {
+.main_itembox_info_leo {
     flex-direction: row;
+    width: 205px;
+    height: 75px;
+    margin-left: 16px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
 }
 
-.main-itembox-website {
+.main_itembox_website {
     font-family: Yinmar;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 28px;
     color: #2FB31A;
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.main-itembox-price {
+.main_itembox_price {
     font-family: Yinmar;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 25px;
     color: #000000;
+    text-align: center;
+    margin: 0px;
+
+}
+
+.maim_item_buy_it_button {
+    background-color: inherit;
+    text-align: center;
+    width: 57px;
+    display: block;
+    margin-left: 40px;
+}
+
+.maim_item_buy_it_button:hover {
+    color: #2FB31A;
+    box-shadow: 3px 1px 1px #2FB21A;
+}
+
+.maim_item_buy_it_button:focus {
+    background-color: lightgray;
+    color: #2FB31A;
 }

@@ -1,25 +1,26 @@
 import React, { PropTypes, Component } from 'react';
-import './ItemBox.css';
+import BoxStyle from './ItemBox.css';
 
 export default class ItemBox extends Component{
-    constructor(prop) {
-        super(prop);
-        this.state = {
-            image_url: "",
-            website: "",
-            price: 300,
-            free_ship: false,
-            ship_cost: 1
-        }
+    constructor(props) {
+        super(props);
+    }
+
+    openTab(url) {
+        chrome.tabs.create({ url: url });
     }
 
     render() {
+        const { website, imgSrc, price, free_ship, ship_cost, size, popularity, url } = this.props.detail;
         return (
-            <div classNames = "main-itembox-leo">
-                <img classNames="main-itembox-image-leo" url={this.state.image_url}/>
-                <div classNames="main-itembox-info-leo">
-                    <h2 classNames="main-itembox-website">{this.state.website}</h2>
-                    <p className="main-itembox-price">${this.state.price} + {this.state.free_ship? "free shipping": this.state.ship_cost}</p>
+            <div className= {BoxStyle.main_itembox_leo}>
+                <div className={BoxStyle.main_itembox_img_btn}>
+                    <img className={BoxStyle.main_itembox_image_leo} src={imgSrc}/>
+                    <input className={BoxStyle.maim_item_buy_it_button} type="button" value="Buy It!" onClick={() => this.openTab(url)}/>
+                </div>
+                <div className={BoxStyle.main_itembox_info_leo}>
+                    <p className={BoxStyle.main_itembox_website}><span>{website}</span></p>
+                    <p className={BoxStyle.main_itembox_price}>${price} + {free_ship === 1? "free shipping": "$" + ship_cost + " shipping"}</p>
 
                 </div>
             </div>

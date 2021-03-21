@@ -3,12 +3,18 @@ import input from "eslint-plugin-jsx-a11y/lib/util/implicitRoles/input";
 import FilterStyle from "./FilterStyle.css"
 
 export default class Filter extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
             <div className = {FilterStyle.mainfilterleo}>
                 <h5 className = {FilterStyle.filterheader}>Size: </h5>
-                <input type="text" placeholder="Enter size..." className = {FilterStyle.filterinput} />
+                <input type="text"
+                        placeholder="Enter size..."
+                        className = {FilterStyle.filterinput}
+                        onChange={(event) => this.props.handler(event)}/>
             </div>
         );
     }

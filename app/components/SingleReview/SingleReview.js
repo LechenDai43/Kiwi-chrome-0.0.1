@@ -1,15 +1,15 @@
-import React from "react";
-import Avatar from "@material-ui/core/Avatar";
-import { deepOrange } from "@material-ui/core/colors";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import "./SingleReview.css";
+import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import { deepOrange } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import PropTypes from 'prop-types';
+import ReviewStyle from './SingleReview.css';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    display: "flex",
-    "& > *": {
+    display: 'flex',
+    '& > *': {
       margin: theme.spacing(1)
     }
   },
@@ -19,44 +19,43 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const tags = ["# White", "# Fashion"];
-
-export default function SingleReview() {
+export default function SingleReview(props) {
   const classes = useStyles();
+  const { avatar, username, imgSrc, tags, review } = props.review;
 
   return (
     <div>
-      <div className="in-line">
-        <Avatar className={classes.orange}>N</Avatar>
-        <span className="username-position">Jinhong</span>
-        <div className="button-position">
-          <Button variant="outlined" className="button-size">
+      <div className={ReviewStyle.in_line}>
+        <Avatar className={classes.orange}>{avatar}</Avatar>
+        <span className={ReviewStyle.username_position}>{username}</span>
+        <div className={ReviewStyle.button_position}>
+          <button className={ReviewStyle.button_size}>
             Follow
-          </Button>
+          </button>
         </div>
       </div>
       <img
-        src="https://images.unsplash.com/photo-1556807457-9c4f0a528934?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-        alt="Fashion shoe"
+        src={imgSrc}
+        alt="Fashion Review"
         width="300px"
         height="250px"
-        className="image-position"
+        className={ReviewStyle.image_position}
       />
-      <div className="in-line">
-        <FavoriteBorderIcon className="green-color" />
-        {tags.map((tag) => (
-          <div className="tag-position">
-            <Button variant="outlined" className="tag-size">
+      <div className={ReviewStyle.in_line}>
+        <FavoriteBorderIcon className={ReviewStyle.green_color} />
+        {tags.map(tag => (
+          <div className={ReviewStyle.tag_position}>
+            <button className={ReviewStyle.tag_size}>
               {tag}
-            </Button>
+            </button>
           </div>
         ))}
       </div>
-      <p className="text-position">
-        I bought this shoe with size 37 from SSense. The size goes a little bit
-        smaller than normal. I really like this shoe! It is very comfortable and
-        you can wear it all the time.
-      </p>
+      <p className={ReviewStyle.text_position}>{review}</p>
     </div>
   );
 }
+
+SingleReview.propTypes = {
+  review: PropTypes.object
+};
