@@ -15,7 +15,10 @@ class Footer extends Component {
   }
 
   setCurrent = (IconText) => {
-    this.props.redirection(IconText);
+      if (this.props.page === IconText) {
+          return;
+      }
+      this.props.redirection(IconText);
   }
 
   render() {
@@ -23,8 +26,10 @@ class Footer extends Component {
       <div className={style.navbar}>
         <HomeIcon className={style.first + (this.props.page === 'Main'? " " + style.grey : "")}
                   onClick={() => this.setCurrent('Main')}/>
-        <RateReviewIcon className={style.second} onClick={() => this.setCurrent('Review')}/>
-        <PersonIcon className={style.third} onClick ={() => this.setCurrent('Profile')}/>
+        <RateReviewIcon className={style.second + (this.props.page === 'Review'? " " + style.grey : "")}
+                onClick={() => this.setCurrent('Review')}/>
+        <PersonIcon className={style.third + (this.props.page === 'Profile'? " " + style.grey : "")}
+                onClick ={() => this.setCurrent('Profile')}/>
       </div>
     );
   }

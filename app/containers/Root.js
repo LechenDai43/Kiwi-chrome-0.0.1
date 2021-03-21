@@ -41,6 +41,9 @@ export default class Root extends Component {
     else if (this.state.page === 'Main') {
       return (<MainPage redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
     }
+    else if (this.state.page === 'Review') {
+      return (<ReviewContainer redirection={(targetPage) => this.redirectByFooter(targetPage)}/>)
+    }
     else {
       return (<h1>Wait</h1>);
     }

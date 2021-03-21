@@ -17,7 +17,7 @@ class ReviewContainer extends Component {
       <div>
         <Header />
         <Reviews />
-        <Footer />
+        <Footer redirection={(targetPage) => this.props.redirection(targetPage)} page='Review' />
       </div>
     );
   }
