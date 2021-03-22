@@ -12,7 +12,7 @@ import ol from "eslint-plugin-jsx-a11y/lib/util/implicitRoles/ol";
 const fakeData = [
     {
         website: 'Farfetch',
-        imgSrc: 'https://cdn-images.farfetch-contents.com/13/83/82/56/13838256_26216740_1000.jpg',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 325,
         free_ship: 1,
         ship_cost: 0,
@@ -22,7 +22,7 @@ const fakeData = [
     },
     {
         website: 'SSense',
-        imgSrc: 'https://img.ssensemedia.com/images/f_auto,q_auto:best/202133M237028_1/common-projects-white-achilles-laceless-sneakers.jpg',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 495,
         free_ship: 1,
         ship_cost: 0,
@@ -42,7 +42,7 @@ const fakeData = [
     },
     {
         website: 'Saks Fifth Avenue',
-        imgSrc: 'https://image.s5a.com/is/image/saks/0400099153185_WHITE?wid=534&hei=712&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 425,
         free_ship: 1,
         ship_cost: 0,
@@ -52,7 +52,7 @@ const fakeData = [
     },
     {
         website: 'Neiman Marcus',
-        imgSrc: 'https://images.neimanmarcus.com/ca/21/product_assets/N/4/H/T/0/NMN4HT0_mz.jpg',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 425,
         free_ship: 0,
         ship_cost: 23,
