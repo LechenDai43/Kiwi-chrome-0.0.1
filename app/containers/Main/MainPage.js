@@ -12,53 +12,53 @@ import ol from "eslint-plugin-jsx-a11y/lib/util/implicitRoles/ol";
 const fakeData = [
     {
         website: 'Farfetch',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 461,
+        imgSrc: 'https://cdn-images.farfetch-contents.com/13/83/82/56/13838256_26216740_1000.jpg',
+        price: 325,
         free_ship: 1,
         ship_cost: 0,
-        size: [40, 41, 42, 43],
+        size: [39, 40, 41, 42, 43, 44, 45, 46, 47],
         popularity: 10,
-        url: "https://www.farfetch.com/shopping/men/common-projects-low-top-sneakers-item-16378798.aspx?storeid=9610"
+        url: "https://www.farfetch.com/shopping/men/common-projects-achilles-lace-up-sneakers-item-13838256.aspx?storeid=10853"
     },
     {
         website: 'SSense',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 500,
+        imgSrc: 'https://img.ssensemedia.com/images/f_auto,q_auto:best/202133M237028_1/common-projects-white-achilles-laceless-sneakers.jpg',
+        price: 495,
         free_ship: 1,
         ship_cost: 0,
-        size: [39, 40, 42, 43],
+        size: [40, 41, 42, 43],
         popularity: 7,
-        url: ''
+        url: 'https://www.ssense.com/en-us/men/product/common-projects/white-achilles-laceless-sneakers/5702571'
     },
     {
         website: 'END.',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 425,
         free_ship: 0,
         ship_cost: 20,
-        size: [43],
+        size: [38, 39, 40, 41, 42, 43, 44, 45],
         popularity: 6,
-        url: ''
+        url: 'https://www.endclothing.com/us/common-projects-original-achilles-low-1528-0506.html'
     },
     {
         website: 'Saks Fifth Avenue',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 475,
+        imgSrc: 'https://image.s5a.com/is/image/saks/0400099153185_WHITE?wid=534&hei=712&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0',
+        price: 425,
         free_ship: 1,
         ship_cost: 0,
-        size: [40, 43, 44],
+        size: [39, 40, 41, 42, 43, 44, 45, 46, 47],
         popularity: 4,
-        url: ''
+        url: 'https://www.saksfifthavenue.com/product/common-projects-original-achilles-leather-low-top-sneakers-0400099153185.html?dwvar_0400099153185_color=WHITE'
     },
     {
         website: 'Neiman Marcus',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 485,
+        imgSrc: 'https://images.neimanmarcus.com/ca/21/product_assets/N/4/H/T/0/NMN4HT0_mz.jpg',
+        price: 425,
         free_ship: 0,
         ship_cost: 23,
-        size: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        size: [39, 40, 41, 42, 43, 44, 45, 46],
         popularity: 10,
-        url: ''
+        url: 'https://www.neimanmarcus.com/p/common-projects-mens-achilles-leather-low-top-sneakers-white-prod198371542?childItemId=NMN4HT0_'
     },
 
 ];
@@ -114,7 +114,7 @@ export default class MainPage extends Component {
     handleFilter (event) {
         var inputvalue = event.target.value;
         var keySize = inputvalue;
-        if (keySize < 34 || keySize > 46) {
+        if (keySize < 34 || keySize > 47) {
             if (keySize == "") {
                 this.setState({target_size: -1});
                 this.forceUpdate();

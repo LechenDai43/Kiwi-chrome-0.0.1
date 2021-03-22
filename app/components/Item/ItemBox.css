@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/yinmar');
+
 .main_itembox_leo {
     display: flex;
     height: 90px;
@@ -10,8 +12,8 @@
 }
 
 .main_itembox_image_leo {
-    width: 97px;
     height: 56px;
+    max-width: 97px;
     margin-left: 20px;
 }
 
