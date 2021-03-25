@@ -68,8 +68,8 @@ export default class MainPage extends Component {
 
     constructor(props) {
         super(props);
-        var dupFakeData = [];
-        for (var i = 0; i < fakeData.length; i++) {
+        let dupFakeData = [];
+        for (let i = 0; i < fakeData.length; i++) {
             dupFakeData.push(fakeData[i]);
         }
         this.state = {
@@ -80,10 +80,10 @@ export default class MainPage extends Component {
     }
 
     populateItems() {
-        var result = [];
-        for (var i = 0; i < this.state.items.length; i++) {
-            var found = 0;
-            for (var j = 0; j < this.props.brands.length; j++) {
+        let result = [];
+        for (let i = 0; i < this.state.items.length; i++) {
+            let found = 0;
+            for (let j = 0; j < this.props.brands.length; j++) {
                 if (this.props.brands[j] === this.state.items[i].website) {
                     found = 1;
                     break;
@@ -94,15 +94,15 @@ export default class MainPage extends Component {
                 continue;
             }
 
-            var detail = this.state.items[i];
+            let detail = this.state.items[i];
             if (this.state.target_size === -1) {
-                result.push(<ItemBox detail={detail}/>);
+                let newLen = result.push(<ItemBox detail={detail}/>);
             }
             else {
                 var sizes = this.state.items[i].size;
                 for (var j = 0; j < sizes.length; j++) {
                     if (sizes[j] == this.state.target_size) {
-                        result.push(<ItemBox detail={detail}/>);
+                        let newLen = result.push(<ItemBox detail={detail}/>);
                         break;
                     }
                 }
@@ -112,8 +112,8 @@ export default class MainPage extends Component {
     }
 
     handleFilter (event) {
-        var inputvalue = event.target.value;
-        var keySize = inputvalue;
+        let inputvalue = event.target.value;
+        let keySize = inputvalue;
         if (keySize < 34 || keySize > 47) {
             if (keySize == "") {
                 this.setState({target_size: -1});
@@ -126,14 +126,14 @@ export default class MainPage extends Component {
     }
 
     handleSorter (event) {
-        var checkedKey = event.target.innerText;
+        let checkedKey = event.target.innerText;
         if (checkedKey == "Price") {
-            var newList = [];
-            var oldList = this.state.items;
+            let newList = [];
+            let oldList = this.state.items;
             while (newList.length < oldList.length) {
-                var i = -1;
-                var value = -1;
-                for (var j = 0; j < oldList.length; j++) {
+                let i = -1;
+                let value = -1;
+                for (let j = 0; j < oldList.length; j++) {
                     if (oldList[j] !== undefined) {
                         if (value === -1) {
                             value = oldList[j].price + oldList[j].ship_cost;
@@ -152,12 +152,12 @@ export default class MainPage extends Component {
             this.forceUpdate();
         }
         else if (checkedKey == "Popularity") {
-            var newList = [];
-            var oldList = this.state.items;
+            let newList = [];
+            let oldList = this.state.items;
             while (newList.length < oldList.length) {
-                var i = -1;
-                var value = -1;
-                for (var j = 0; j < oldList.length; j++) {
+                let i = -1;
+                let value = -1;
+                for (let j = 0; j < oldList.length; j++) {
                     if (oldList[j] !== undefined) {
                         if (value === -1) {
                             value = oldList[j].popularity;
