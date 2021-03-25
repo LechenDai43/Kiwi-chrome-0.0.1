@@ -19,17 +19,17 @@ export default class SelectionPage extends Component {
     }
 
     populateStore() {
-        var list = [];
-        for (var i = 0; i < fakeData.length; i++) {
-            list.push((<Selector brand={fakeData[i]} handler={(v, o) => this.updateList(v, o)}/>))
+        let list = [];
+        for (let i = 0; i < fakeData.length; i++) {
+            let newLen = list.push((<Selector brand={fakeData[i]} handler={(v, o) => this.updateList(v, o)}/>))
         }
         return list;
     }
 
     updateList (value, operation) {
-        var new_list = [];
-        var found = 0;
-        for (var i = 0; i < this.state.checked_list.length; i++) {
+        let new_list = [];
+        let found = 0;
+        for (let i = 0; i < this.state.checked_list.length; i++) {
             if (value === this.state.checked_list[i] ) {
                 if (operation === -1) {
                     continue
