@@ -21,7 +21,10 @@ export default class SelectionPage extends Component {
     populateStore() {
         let list = [];
         for (let i = 0; i < fakeData.length; i++) {
-            let newLen = list.push((<Selector brand={fakeData[i]} handler={(v, o) => this.updateList(v, o)}/>))
+            let newLen = list.push((<Selector brand={fakeData[i]} handler={(v, o) => this.updateList(v, o)} className= {SelectionPageStyle.selectionitem}/>))
+            if (i < fakeData.length - 1) {
+                newLen = list.push((<hr/>));
+            }
         }
         return list;
     }
@@ -55,7 +58,7 @@ export default class SelectionPage extends Component {
             <div className= {SelectionPageStyle.selectionpagebodyleo}>
                 <div className= {SelectionPageStyle.selectionheaderpart}>
                     <Header/>
-                    <AccountCircleIcon/>
+                    <AccountCircleIcon className= {SelectionPageStyle.selectionpageaccount}/>
                 </div>
                 <h6 className={SelectionPageStyle.selectioninstruction}>Select your favorite stores</h6>
                 <hr/>
