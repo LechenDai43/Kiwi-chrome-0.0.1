@@ -19,7 +19,7 @@ export default class Selector extends Component {
 
     render() {
         return (
-            <div style={{marginLeft: "52px"}}>
+            <div className={style.selectionitem}>
                 <FormControlLabel
                     control={
                         <Checkbox
@@ -28,7 +28,7 @@ export default class Selector extends Component {
                             onChange={()=> this.handleChecking()}
                         />
                     }
-                    label={<span className={style.text}>{this.props.brand}</span>}
+                    label={<h6 className={style.text}>{this.props.brand}</h6>}
                 />
             </div>
         )

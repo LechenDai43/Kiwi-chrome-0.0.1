@@ -24,11 +24,11 @@ class Footer extends Component {
   render() {
     return (
       <div className={style.navbar}>
-        <HomeIcon className={style.first + (this.props.page === 'Main'? " " + style.grey : "")}
+        <HomeIcon className={style.first + " " + (this.props.page === 'Main'? " " + style.grey : style.green)}
                   onClick={() => this.setCurrent('Main')}/>
-        <RateReviewIcon className={style.second + (this.props.page === 'Review'? " " + style.grey : "")}
+        <RateReviewIcon className={style.second + " " + (this.props.page === 'Review'? style.grey : style.green)}
                 onClick={() => this.setCurrent('Review')}/>
-        <PersonIcon className={style.third + (this.props.page === 'Profile'? " " + style.grey : "")}
+        <PersonIcon className={style.third + " " + (this.props.page === 'Profile'? " " + style.grey : style.green)}
                 onClick ={() => this.setCurrent('Profile')}/>
       </div>
     );

@@ -9,29 +9,23 @@ width: 100%;
 }
 
 .first{
-float: left;
-position: sticky;
-display: block;
-color: #2FB31A;
 padding-left: 40px;
 }
 
 .second{
-float: left;
-position: sticky;
-display: block;
-color: #2FB31A;
 margin-left: 90px;
 }
 
 .third{
-float: left;
-position: sticky;
-display: block;
-color: #2FB31A;
 margin-left: 90px;
 }
 
 .grey {
     color: darkgrey;
+    cursor: not-allowed;
+}
+
+.green {
+    color: #2FB31A;
+    cursor: pointer;
 }
