@@ -21,12 +21,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function SingleReview(props) {
   const classes = useStyles();
-  const { avatar, username, imgSrc, tags, review } = props.review;
+  const { avatar, avatarImg, username, imgSrc, tags, review } = props.review;
 
   return (
-    <div>
+    <div style={{marginLeft: '26px'}}>
       <div className={ReviewStyle.in_line}>
-        <Avatar className={classes.orange}>{avatar}</Avatar>
+        <Avatar className={classes.orange} alt={avatar} src={avatarImg}/>
         <span className={ReviewStyle.username_position}>{username}</span>
         <div className={ReviewStyle.button_position}>
           <button className={ReviewStyle.button_size}>

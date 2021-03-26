@@ -13,7 +13,7 @@ export default class Selector extends Component {
 
     handleChecking () {
         this.setState({checked: this.state.checked?false:true});
-        var operation = this.state.checked? -1: 1;
+        let operation = this.state.checked? -1: 1;
         this.props.handler(this.props.brand, operation);
     }
 

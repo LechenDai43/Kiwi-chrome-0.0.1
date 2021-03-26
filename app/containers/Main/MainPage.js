@@ -12,53 +12,53 @@ import ol from "eslint-plugin-jsx-a11y/lib/util/implicitRoles/ol";
 const fakeData = [
     {
         website: 'Farfetch',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 461,
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
+        price: 325,
         free_ship: 1,
         ship_cost: 0,
-        size: [40, 41, 42, 43],
+        size: [39, 40, 41, 42, 43, 44, 45, 46, 47],
         popularity: 10,
-        url: "https://www.farfetch.com/shopping/men/common-projects-low-top-sneakers-item-16378798.aspx?storeid=9610"
+        url: "https://www.farfetch.com/shopping/men/common-projects-achilles-lace-up-sneakers-item-13838256.aspx?storeid=10853"
     },
     {
         website: 'SSense',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 500,
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
+        price: 495,
         free_ship: 1,
         ship_cost: 0,
-        size: [39, 40, 42, 43],
+        size: [40, 41, 42, 43],
         popularity: 7,
-        url: ''
+        url: 'https://www.ssense.com/en-us/men/product/common-projects/white-achilles-laceless-sneakers/5702571'
     },
     {
         website: 'END.',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
         price: 425,
         free_ship: 0,
         ship_cost: 20,
-        size: [43],
+        size: [38, 39, 40, 41, 42, 43, 44, 45],
         popularity: 6,
-        url: ''
+        url: 'https://www.endclothing.com/us/common-projects-original-achilles-low-1528-0506.html'
     },
     {
         website: 'Saks Fifth Avenue',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 475,
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
+        price: 425,
         free_ship: 1,
         ship_cost: 0,
-        size: [40, 43, 44],
+        size: [39, 40, 41, 42, 43, 44, 45, 46, 47],
         popularity: 4,
-        url: ''
+        url: 'https://www.saksfifthavenue.com/product/common-projects-original-achilles-leather-low-top-sneakers-0400099153185.html?dwvar_0400099153185_color=WHITE'
     },
     {
         website: 'Neiman Marcus',
-        imgSrc: 'https://s3-alpha-sig.figma.com/img/ab39/dd35/f0d9a735d34b21f8bd07e32242610296?Expires=1616976000&Signature=NhOWp4q4efY1CkXJ3qjPZ9zvm5o~zgKd2wP6jmqYtu6mlW35gcbV6yQPL6nX6ZAbTI8qVTqi-ZAZOwEGm3ADPj7lHjR8vwI-~RoJ4SJRrbfdJeUb4mIFzBEs1V15nPdUBM-ZQX4oEV29Iw~LWafioA9Sg7jO6NsNSvzSmbHq6gPITukgufrAioQwneRnatkYSNC8BURUjcc2Hr098UAkTlYxAmovEOpUWAzvEyLZ2NIhxGAJp8Ii537x~Ks6KsjXiPyv4bHVCEUqmR2T0CvlBzODWYhjf-rqX~8jpF8iTNolftueXWDTPGoTOYUF09P2t~kLpaIJp13sF0MDqrzi7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-        price: 485,
+        imgSrc: 'https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/1/21-08-2019_commonprojects_originalachilleslow_white_1528-0506_jm_1x.jpg',
+        price: 425,
         free_ship: 0,
         ship_cost: 23,
-        size: [37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
+        size: [39, 40, 41, 42, 43, 44, 45, 46],
         popularity: 10,
-        url: ''
+        url: 'https://www.neimanmarcus.com/p/common-projects-mens-achilles-leather-low-top-sneakers-white-prod198371542?childItemId=NMN4HT0_'
     },
 
 ];
@@ -68,8 +68,8 @@ export default class MainPage extends Component {
 
     constructor(props) {
         super(props);
-        var dupFakeData = [];
-        for (var i = 0; i < fakeData.length; i++) {
+        let dupFakeData = [];
+        for (let i = 0; i < fakeData.length; i++) {
             dupFakeData.push(fakeData[i]);
         }
         this.state = {
@@ -80,10 +80,10 @@ export default class MainPage extends Component {
     }
 
     populateItems() {
-        var result = [];
-        for (var i = 0; i < this.state.items.length; i++) {
-            var found = 0;
-            for (var j = 0; j < this.props.brands.length; j++) {
+        let result = [];
+        for (let i = 0; i < this.state.items.length; i++) {
+            let found = 0;
+            for (let j = 0; j < this.props.brands.length; j++) {
                 if (this.props.brands[j] === this.state.items[i].website) {
                     found = 1;
                     break;
@@ -94,15 +94,15 @@ export default class MainPage extends Component {
                 continue;
             }
 
-            var detail = this.state.items[i];
+            let detail = this.state.items[i];
             if (this.state.target_size === -1) {
-                result.push(<ItemBox detail={detail}/>);
+                let newLen = result.push(<ItemBox detail={detail}/>);
             }
             else {
                 var sizes = this.state.items[i].size;
                 for (var j = 0; j < sizes.length; j++) {
                     if (sizes[j] == this.state.target_size) {
-                        result.push(<ItemBox detail={detail}/>);
+                        let newLen = result.push(<ItemBox detail={detail}/>);
                         break;
                     }
                 }
@@ -112,9 +112,9 @@ export default class MainPage extends Component {
     }
 
     handleFilter (event) {
-        var inputvalue = event.target.value;
-        var keySize = inputvalue;
-        if (keySize < 34 || keySize > 46) {
+        let inputvalue = event.target.value;
+        let keySize = inputvalue;
+        if (keySize < 34 || keySize > 47) {
             if (keySize == "") {
                 this.setState({target_size: -1});
                 this.forceUpdate();
@@ -126,14 +126,14 @@ export default class MainPage extends Component {
     }
 
     handleSorter (event) {
-        var checkedKey = event.target.innerText;
+        let checkedKey = event.target.innerText;
         if (checkedKey == "Price") {
-            var newList = [];
-            var oldList = this.state.items;
+            let newList = [];
+            let oldList = this.state.items;
             while (newList.length < oldList.length) {
-                var i = -1;
-                var value = -1;
-                for (var j = 0; j < oldList.length; j++) {
+                let i = -1;
+                let value = -1;
+                for (let j = 0; j < oldList.length; j++) {
                     if (oldList[j] !== undefined) {
                         if (value === -1) {
                             value = oldList[j].price + oldList[j].ship_cost;
@@ -152,12 +152,12 @@ export default class MainPage extends Component {
             this.forceUpdate();
         }
         else if (checkedKey == "Popularity") {
-            var newList = [];
-            var oldList = this.state.items;
+            let newList = [];
+            let oldList = this.state.items;
             while (newList.length < oldList.length) {
-                var i = -1;
-                var value = -1;
-                for (var j = 0; j < oldList.length; j++) {
+                let i = -1;
+                let value = -1;
+                for (let j = 0; j < oldList.length; j++) {
                     if (oldList[j] !== undefined) {
                         if (value === -1) {
                             value = oldList[j].popularity;
